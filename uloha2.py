@@ -6,7 +6,7 @@ def pocet_suborov():
         except ValueError:
             print("Nebolo zadané celé číslo!")
 
-input = []
+vstup = []
 pocet = 0
 
 with open("basnicka.txt") as subor:
@@ -15,7 +15,7 @@ with open("basnicka.txt") as subor:
 
 for i in range(pocet_suborov()):
     pocet += 1
-    if pocet == len(input):
-        pocet -= len(input)
+    if pocet == len(vstup):
+        pocet -= len(vstup)
     with open(f"""slovo{pocet}""", mode="w") as subor:
-        print(input[pocet - 1], file=subor)
+        print(vstup[pocet - 1], file=subor)
